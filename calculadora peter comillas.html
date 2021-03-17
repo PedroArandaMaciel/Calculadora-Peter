@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!--elemento meta con atributo charset en un documento HTML 
+                               está destinado a indicar la codificación de caracteres utilizada-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--mantener escala en una pc,notebook, celular-->
+    <title>Calculadora Peter</title>
+</head>
+<style>      
+    #fondoNegro{
+      background-color: aqua;
+    
+    }
+
+</style>
+<body>
+    <div id="fondoNegro">
+       
+        <input type="number" id="primerNum" autofocus placeholder="Escribe un número"> <!--input type...utilizados para permitir que el usuario ingrese un numero-->
+        <input type="number" id="segundoNum" autofocus placeholder="Escribe un número">
+        
+        <br>
+        <br>
+
+        <button onclick="sumar()">sumar</button>
+        <button onclick="restar()">restar</button>
+        <button onclick="multiplicar()">Multiplicar</button>
+        <button onclick="dividir()">Dividir</button>
+
+        <p id="resultado"></p>
+        
+    </div> 
+</body>
+<script>{
+
+  function sumar() {
+        var num1 = document.getElementById("primerNum").value; //-- El método getElementById permite, como su nombre indica, seleccionar un elemento del documento por medio del valor del atributo id que se le haya asignado
+        var num2 = document.getElementById("segundoNum").value; //-- value es para que interprete o lea el valor que es o esta cargado.
+
+               //--parseInt cambia de cadena de texto a numero
+
+        document.getElementById("resultado").innerHTML=parseInt(num1)+parseInt(num2);
+    
+    
+   }
+   function restar() {
+       var num1=document.getElementById("primerNum").value;
+       var num2=document.getElementById("segundoNum").value;
+
+       document.getElementById("resultado").innerHTML=parseInt(num1)-parseInt(num2);
+       
+
+   }
+   function multiplicar(){
+       var num1=document.getElementById("primerNum").value;
+       var num2=document.getElementById("segundoNum").value;
+
+       document.getElementById("resultado").innerHTML=parseInt(num1)*parseInt(num2);
+
+   }
+   function dividir(){
+       var num1=document.getElementById("primerNum").value;
+       var num2=document.getElementById("segundoNum").value;
+
+       document.getElementById("resultado").innerHTML=parseInt(num1)/(num2);
+       
+       if(num1==0){
+           alert("No puedes dividir por cero")
+       }
+
+        else if(num2==0){
+            alert("No puede dividir por cero")
+        }
+
+ }
+}
+
+</script>
+</html>
