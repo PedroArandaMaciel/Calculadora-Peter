@@ -29,8 +29,7 @@
 
         <p id="resultado"></p>
         
-    </div> 
-</body>
+</div> 
 <script>{
 
   function sumar() {
@@ -76,4 +75,5 @@
 }
 
 </script>
+</body>
 </html>
